@@ -490,11 +490,11 @@
 
   //// Define homing/hard limit switch input pins and limit interrupt vectors. 
   #ifdef DEFAULTS_ENDER_2 
-    #define MIN_LIMIT_PORT_0 C  // X Limit Min - Pin C4
+    #define MIN_LIMIT_PORT_0 C  // X Limit Min - Pin C2
     #define MIN_LIMIT_BIT_0 2  
     #define MIN_LIMIT_PORT_1 C  // Y Limit Min - Pin C3
     #define MIN_LIMIT_BIT_1 3  
-    #define MIN_LIMIT_PORT_2 C  // Z Limit Min - Pin C2
+    #define MIN_LIMIT_PORT_2 C  // Z Limit Min - Pin C4
     #define MIN_LIMIT_BIT_2 4  
     #define MIN_LIMIT_PORT_3 A  // E Limit Min - Pin A7 - Y'
     #define MIN_LIMIT_BIT_3 7  
@@ -578,7 +578,7 @@
   #ifdef DEFAULTS_ENDER_2
     #define PROBE_BIT     2  // CHECK-Header (Pin 35 / PA2)
   #else
-  #define PROBE_BIT     6  // Standard Melzi: BEDTEMP (A6)
+    #define PROBE_BIT     6  // Standard Melzi: BEDTEMP (A6)
   #endif
   #define PROBE_MASK      (1<<PROBE_BIT)
 

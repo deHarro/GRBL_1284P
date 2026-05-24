@@ -234,6 +234,12 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>$(ProjectDir)..\GRBL_1284P;C:\Users\Harry\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.7\cores\arduino;C:\Users\Harry\AppData\Local\arduino15\packages\Sanguino\hardware\avr\1.0.3\variants\sanguino;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include</IncludePath>
+    <RemoteCCompileToolExe>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</RemoteCCompileToolExe>
+    <RemoteCppCompileToolExe>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</RemoteCppCompileToolExe>
+    <ValidateArchitecture>false</ValidateArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.7\cores\arduino;C:\Users\Harry\AppData\Local\arduino15\packages\Sanguino\hardware\avr\1.0.3\variants\sanguino;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include</IncludePath>
     <RemoteCCompileToolExe>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</RemoteCCompileToolExe>
     <RemoteCppCompileToolExe>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</RemoteCppCompileToolExe>
@@ -255,7 +261,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.7\cores\arduino;C:\Users\Harry\AppData\Local\arduino15\packages\Sanguino\hardware\avr\1.0.3\variants\sanguino;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\GRBL_1284P;C:\Users\Harry\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.7\cores\arduino;C:\Users\Harry\AppData\Local\arduino15\packages\Sanguino\hardware\avr\1.0.3\variants\sanguino;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <GccToolChain>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</GccToolChain>
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
       <CLanguageStandard>gnu11</CLanguageStandard>
@@ -267,12 +273,26 @@
       <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__AVR_atmega1284p__;__AVR_ATmega1284P__;__AVR_ATmega1284p__;F_CPU=16000000L;ARDUINO=108010;ARDUINO_AVR_SANGUINO;ARDUINO_ARCH_AVR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.7\cores\arduino;C:\Users\Harry\AppData\Local\arduino15\packages\Sanguino\hardware\avr\1.0.3\variants\sanguino;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\7.3.0\include-fixed;c:\users\harry\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccToolChain>C:\Users\Harry\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\bin\avr-g++</GccToolChain>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <CLanguageStandard>gnu11</CLanguageStandard>
+      <CAdditionalWarning />
+      <CppAdditionalWarning />
+      <ForcedIncludeFiles>c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\extensions\npgchjmm.ti5\Micro Platforms\default\vm-intelli-pre.h;C:\Users\Harry\AppData\Local\Temp\VMBuilds\GRBL_1284P\Sanguino_sanguino_atmega1284p\Debug\.vmintelli\024ef368a8ef0c37a0cd23b7cd5863b2\vm-intelli-gcc-defines.h;c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\extensions\npgchjmm.ti5\Micro Platforms\default\vm-intelli-post.h;$(ProjectDir)__vm\.GRBL_1284P.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <UndefineAllPreprocessorDefinitions>true</UndefineAllPreprocessorDefinitions>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__AVR_atmega1284p__;__AVR_ATmega1284P__;__AVR_ATmega1284p__;F_CPU=16000000L;ARDUINO=108010;ARDUINO_AVR_SANGUINO;ARDUINO_ARCH_AVR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties debug.local.portspeed="57600" />
+      <UserProperties config.Debug.customdebug_Sanguino_sanguino_atmega1284p_debugger_type="universal" debug.local.portspeed="57600" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

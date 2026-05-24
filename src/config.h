@@ -39,6 +39,11 @@
 
 // To use with ENDER-2 board
 #define DEFAULTS_ENDER_2
+#ifdef DEFAULTS_ENDER_2
+    #ifndef DEFAULTS_RAMPS_BOARD
+        #define DEFAULTS_RAMPS_BOARD // Schaltet die RAMPS-Logik für die anderen 8 Dateien mit ein!
+    #endif
+#endif
 #define CPU_MAP_MELZI_CREALITY
 
 

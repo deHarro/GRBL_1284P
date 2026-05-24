@@ -32,7 +32,7 @@
 
 void limits_init()
 {
-  #if ((defined DEFAULTS_RAMPS_BOARD) || (defined DEFAULTS_ENDER_2))
+  #ifdef DEFAULTS_RAMPS_BOARD
     // Set as input pins
     MIN_LIMIT_DDR(0) &= ~(1<<MIN_LIMIT_BIT(0));
     MIN_LIMIT_DDR(1) &= ~(1<<MIN_LIMIT_BIT(1));
@@ -165,7 +165,7 @@ void limits_init()
 // Disables hard limits.
 void limits_disable()
 {
-#if ((defined DEFAULTS_RAMPS_BOARD) || (defined DEFAULTS_ENDER_2))
+#ifdef DEFAULTS_RAMPS_BOARD
 #ifndef DISABLE_HW_LIMITS_INTERRUPT
       LIMIT_PCMSK &= ~LIMIT_MASK;  // Disable specific pins of the Pin Change Interrupt
       PCICR &= ~(1 << LIMIT_INT);  // Disable Pin Change Interrupt
@@ -176,7 +176,7 @@ void limits_disable()
   #endif // DEFAULTS_RAMPS_BOARD
 }
 
-#if ((defined DEFAULTS_RAMPS_BOARD) || (defined DEFAULTS_ENDER_2))
+#ifdef DEFAULTS_RAMPS_BOARD
 #if N_AXIS == 4
     static volatile uint8_t * const max_limit_pins[N_AXIS] = {&MAX_LIMIT_PIN(0), &MAX_LIMIT_PIN(1), &MAX_LIMIT_PIN(2), &MAX_LIMIT_PIN(3)};
     static volatile uint8_t * const min_limit_pins[N_AXIS] = {&MIN_LIMIT_PIN(0), &MIN_LIMIT_PIN(1), &MIN_LIMIT_PIN(2), &MIN_LIMIT_PIN(3)};
@@ -205,7 +205,7 @@ void limits_disable()
 // number in bit position, i.e. AXIS_3 is (1<<2) or bit 2, and AXIS_2 is (1<<1) or bit 1.
 uint8_t limits_get_state()
 {
-#if ((defined DEFAULTS_RAMPS_BOARD) || (defined DEFAULTS_ENDER_2))
+#ifdef DEFAULTS_RAMPS_BOARD
     uint8_t limit_state_max = 0;
     uint8_t limit_state_min = 0;
     uint8_t pin;
@@ -249,7 +249,7 @@ uint8_t limits_get_state()
   #endif //ifdef DEFAULTS_RAMPS_BOARD
 }
 
-#if ((defined DEFAULTS_RAMPS_BOARD) || (defined DEFAULTS_ENDER_2))
+#ifdef DEFAULTS_RAMPS_BOARD
 #ifndef DISABLE_HW_LIMITS_INTERRUPT
     #error "HW limits interrupts are not implemented"
   #endif
@@ -333,7 +333,7 @@ uint8_t limits_get_state()
   #endif
 #endif // DEFAULTS_RAMPS_BOARD
 
-#if ((defined DEFAULTS_RAMPS_BOARD) || (defined DEFAULTS_ENDER_2))
+#ifdef DEFAULTS_RAMPS_BOARD
     static uint8_t axislock_active(uint8_t *axislock)
   {
     uint8_t res = 0;
@@ -391,7 +391,7 @@ void limits_go_home(uint8_t cycle_mask)
   bool approach = true;
   float homing_rate = settings.homing_seek_rate;
 
-#if ((defined DEFAULTS_RAMPS_BOARD) || (defined DEFAULTS_ENDER_2))
+#ifdef DEFAULTS_RAMPS_BOARD
     uint8_t limit_state, n_active_axis;
     uint8_t axislock[N_AXIS];
     do {
