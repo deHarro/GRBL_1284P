@@ -51,9 +51,6 @@
 //#define DEFAULTS_RAMPS_BOARD       
 //#define CPU_MAP_MELZI_CREALITY    
 
-//#include "grbl.h" // For Arduino IDE compatibility.
-
-
 // Serial baud rate
 // #define BAUD_RATE 230400
 #define BAUD_RATE 115200
